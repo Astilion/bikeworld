@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
 
 const Header = props => {
-    return (
+    return (<>
       <header className={styles.header}>
         <h1 className={styles.logo}>BikeWorld</h1>
         <div className={styles.searchBar} >
@@ -9,6 +9,12 @@ const Header = props => {
             <button><i class="ti ti-search"></i></button>
         </div>
       </header>
+      <div className="hero">
+        <div className="hero__img"></div>
+        <div className="hero__shadow"></div>
+        <div className="hero__text"></div>
+      </div>
+      </>
     );
   };
 export default Header;
