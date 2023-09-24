@@ -1,0 +1,21 @@
+.panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+        flex: 1;
+        padding: 1.5em;
+        background-color: #5B5656;
+        color: white;
+        border: none;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-color: #7FCD91;
+            color: white;
+        }
+    }
+}

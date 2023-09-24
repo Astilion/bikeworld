@@ -17,25 +17,25 @@
     }
     .searchInput {
         background-color: #5B5656;
-        padding: .3em;
+        padding: .6em;
         border-radius: 6px;
         border: none;
     }
     button {
         position: relative;
-        background-color: #4D4646;
+        background-color: #7FCD91;
         border: none;
         border-radius: 6px;
-        padding: .3em;
+        padding: .6em;
         margin-left: 3px;
 
         i{
-            color: #7FCD91;
+            color: White;
         }
 
         &:focus, &:hover {
             outline: #7FCD91;
-            background-color: #5B5656;
+            background-color: #64ad75;
         }
     }
 }
