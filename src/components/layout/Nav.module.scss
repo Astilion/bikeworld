@@ -13,10 +13,12 @@
 		.navItem {
 			padding: 1em;
 			cursor: pointer;
-			transition: color 0.3s;
+			transition: color, box-shadow 0.3s;
+
 			&:hover,
 			&:focus {
 				color: #7fcd91;
+				box-shadow: 1px 2px 2px rgb(64, 53, 53);
 			}
 		}
 		.menuItem {
