@@ -4,6 +4,7 @@ import Header from './components/layout/Header';
 import UserPanel from './components/userPanel/userPanel';
 import Nav from './components/layout/Nav';
 import MobileNav from './components/layout/MobileNav';
+import HeroImg from './components/layout/HeroImage';
 const App =() => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isNavVisible, setIsNavVisible] = useState(false)
@@ -30,6 +31,10 @@ const App =() => {
     {!isShown ? null : <Nav/>}
     {isNavVisible && <MobileNav/>}
     {isShown ? null : <UserPanel onShowNav={mobileNavHandler}/>}
+    <HeroImg/>
+    <main>
+
+    </main>
   </>);
 }
 

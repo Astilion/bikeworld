@@ -5,15 +5,17 @@
 		color: #f5eaea;
 		font-weight: bold;
 		margin: 0 5em;
+
 		.navList {
 			display: flex;
 			justify-content: space-between;
 			list-style: none;
 		}
 		.navItem {
-			padding: 1em;
+			padding: 1em 2em;
 			cursor: pointer;
 			transition: color, box-shadow 0.3s;
+
 
 			&:hover,
 			&:focus {
@@ -23,7 +25,7 @@
 		}
 		.menuItem {
 			position: relative;
-			padding: 1em;
+			padding: 1em 2em;
 			margin-bottom: 0.5em;
 
 			cursor: pointer;
@@ -42,6 +44,10 @@
 			transform: translateX(-50%);
 			align-items: flex-start;
 			list-style: none;
+			z-index: 10;
+			background-color: #5b5656;
+			padding: 0em 2em;
+			border-radius: 8px;
 
 			li {
 				margin-top: 0.5em;
