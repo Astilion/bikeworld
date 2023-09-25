@@ -1,0 +1,54 @@
+.nav {
+	text-align: center;
+	color: #f5eaea;
+	font-weight: bold;
+	margin: 0 5em;
+	.navList {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+	}
+	.navBikeList {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+	}
+	.navItem {
+		padding: 1em;
+		cursor: pointer;
+        transition: color .3s;
+		&:hover,
+		&:focus {
+			color: #7fcd91;
+		}
+	}
+	.menuItem {
+		position: relative;
+		padding: 1em;
+
+		cursor: pointer;
+		&:hover {
+			.dropdown {
+				li {
+					display: block;
+					padding: 0.5em;
+				}
+			}
+		}
+	}
+	.dropdown {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		align-items: flex-start;
+
+		list-style: none;
+		li {
+			display: none;
+			&:hover {
+				color: #7fcd91;
+			}
+		}
+	}
+}

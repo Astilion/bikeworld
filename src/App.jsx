@@ -2,6 +2,7 @@ import './App.scss'
 import { useState, useEffect } from 'react'
 import Header from './components/layout/Header';
 import UserPanel from './components/userPanel/userPanel';
+import Nav from './components/layout/Nav';
 const App =() => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -20,6 +21,7 @@ const App =() => {
     <>
  
     <Header isShown={isShown}/>
+    {!isShown ? null : <Nav/>}
     {isShown ? null : <UserPanel/>}
     </>
   );
