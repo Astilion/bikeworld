@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react'
 import Header from './components/layout/Header';
 import UserPanel from './components/userPanel/userPanel';
 import Nav from './components/layout/Nav';
+import MobileNav from './components/layout/MobileNav';
 const App =() => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [isNavVisible, setIsNavVisible] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,14 +19,18 @@ const App =() => {
   }, []);
 
   const isShown = screenWidth >= 768
+
+  const mobileNavHandler = () => {
+    setIsNavVisible(!isNavVisible)
+  }
   return (
     <>
  
     <Header isShown={isShown}/>
     {!isShown ? null : <Nav/>}
-    {isShown ? null : <UserPanel/>}
-    </>
-  );
+    {isNavVisible && <MobileNav/>}
+    {isShown ? null : <UserPanel onShowNav={mobileNavHandler}/>}
+  </>);
 }
 
 export default App;
