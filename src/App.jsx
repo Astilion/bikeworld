@@ -19,7 +19,7 @@ const App =() => {
   return (
     <>
  
-    <Header/>
+    <Header isShown={isShown}/>
     {isShown ? null : <UserPanel/>}
     </>
   );
