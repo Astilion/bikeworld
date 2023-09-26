@@ -1,0 +1,14 @@
+.bestsellers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #4d4646;
+	color: #f5eaea;
+	padding: 2em;
+
+	.carousel {
+		display: flex;
+		justify-content: center;
+		max-width: 1200px;
+	}
+}
