@@ -6,6 +6,7 @@ import Nav from "./components/layout/Nav";
 import MobileNav from "./components/layout/MobileNav";
 import HeroImg from "./components/layout/HeroImage";
 import Bestsellers from "./components/bestsellers/Bestsellers";
+
 const App = () => {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	const [isNavVisible, setIsNavVisible] = useState(false);
@@ -33,9 +34,9 @@ const App = () => {
 			{isShown ? null : <UserPanel onShowNav={mobileNavHandler} />}
 			<HeroImg />
 			<main>
-        <Bestsellers/>
-        <div className="filler"></div>
-      </main>
+				<Bestsellers />
+				<div className='filler'></div>
+			</main>
 		</>
 	);
 };

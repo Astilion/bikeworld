@@ -9,9 +9,7 @@ const Card = props => {
 			<div className={styles["text-container"]}>
 				<p className={styles["item-name"]}>{props.name}</p>
 				<p className={styles.price}>{props.price}</p>
-				<p className={styles.description}>
-					{props.description}
-				</p>
+				<p className={styles.description}>{props.description}</p>
 			</div>
 		</div>
 	);

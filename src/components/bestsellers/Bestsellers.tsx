@@ -5,7 +5,7 @@ const Bestsellers = props => {
 	return (
 		<div className={styles.bestsellers}>
 			<h2>Bestsellers</h2>
-            <Slider/>
+			<Slider />
 		</div>
 	);
 };

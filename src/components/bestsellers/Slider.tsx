@@ -16,58 +16,53 @@ const Slider = props => {
 			name: "Mountain bike 1",
 			price: "799$",
 			description: "Lorem ipsum...",
-            url: bike1
+			url: bike1,
 		},
 		{
 			id: 2,
 			name: "Mountain bike 2",
 			price: "799$",
 			description: "Lorem ipsum...",
-            url: bike2
+			url: bike2,
 		},
 		{
 			id: 3,
 			name: "Mountain bike 3",
 			price: "799$",
 			description: "Lorem ipsum...",
-            url: bike3
+			url: bike3,
 		},
 		{
 			id: 4,
 			name: "saddle",
 			price: "39$",
 			description: "Lorem ipsum...",
-            url: bike4
+			url: bike4,
 		},
 		{
 			id: 5,
 			name: "Shifters",
 			price: "79$",
 			description: "Lorem ipsum...",
-            url: bike5
+			url: bike5,
 		},
 	];
-
 
 	const carousel = (
 		<div className={styles.carousel}>
 			{slideData.map((card, index) => (
 				<Card
-                    key={card.id}
-						name={card.name}
-						price={card.price}
-						description={card.description}
-                        url= {card.url}
-                        hidden={index !== currentSlide}
-					/>
+					key={card.id}
+					name={card.name}
+					price={card.price}
+					description={card.description}
+					url={card.url}
+					hidden={index !== currentSlide}
+				/>
 			))}
 		</div>
 	);
 
-	return (
-		<div className={styles.slider}>
-            {carousel}
-		</div>
-	);
+	return <div className={styles.slider}>{carousel}</div>;
 };
 export default Slider;

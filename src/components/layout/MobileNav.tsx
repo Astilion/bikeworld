@@ -13,14 +13,15 @@ const MobileNav = props => {
 				<li className={styles.menuItem} onClick={menuItemClickHandler}>
 					Bikes
 				</li>
-					{isDropdownVisible && (<>
-							<li className={styles.navItem}>Mountain Bikes</li>
-							<li className={styles.navItem}>Trekking Bikes</li>
-							<li className={styles.navItem}>Cross Bikes</li>
-							<li className={styles.navItem}>E-Bikes</li>
-							<li className={styles.navItem}>City Bikes</li>
-                            </>
-					)}
+				{isDropdownVisible && (
+					<>
+						<li className={styles.navItem}>Mountain Bikes</li>
+						<li className={styles.navItem}>Trekking Bikes</li>
+						<li className={styles.navItem}>Cross Bikes</li>
+						<li className={styles.navItem}>E-Bikes</li>
+						<li className={styles.navItem}>City Bikes</li>
+					</>
+				)}
 
 				<li className={styles.navItem}>
 					<a>Accesories</a>
