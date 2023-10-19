@@ -1,7 +1,7 @@
 import styles from "./Bestsellers.module.scss";
-
 import Slider from "./Slider";
-const Bestsellers = props => {
+
+const Bestsellers = () => {
 	return (
 		<div className={styles.bestsellers}>
 			<h2>Bestsellers</h2>

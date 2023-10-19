@@ -1,6 +1,13 @@
 import styles from "./Card.module.scss";
 
-const Card = props => {
+type CardProps = {
+	url: string;
+	name: string;
+	price: string;
+	description: string;
+}
+
+const Card = (props: CardProps) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles["img-container"]}>

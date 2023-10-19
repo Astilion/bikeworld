@@ -1,6 +1,10 @@
 import styles from "./UserPanel.module.scss";
 
-const UserPanel = props => {
+type UserPanelProps = {
+	onShowNav: () => void;
+}
+
+const UserPanel = (props: UserPanelProps) => {
 	const navHandler = () => {
 		props.onShowNav();
 	};

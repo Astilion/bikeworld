@@ -7,7 +7,7 @@ import bike3 from "../../assets/Rower-gorski.jpg";
 import bike4 from "../../assets/WYGODNE-SIODELKO-ROWEROWE-SPORTOWE-PIANKA-MIEKKIE.jpg";
 import bike5 from "../../assets/KLAMKOMANETKA-SHIMANO-Acera-STEF-500-3x7.jpg";
 
-const Slider = props => {
+const Slider = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const slideData = [
@@ -50,14 +50,13 @@ const Slider = props => {
 
 	const carousel = (
 		<div className={styles.carousel}>
-			{slideData.map((card, index) => (
+			{slideData.map((card) => (
 				<Card
 					key={card.id}
 					name={card.name}
 					price={card.price}
 					description={card.description}
 					url={card.url}
-					hidden={index !== currentSlide}
 				/>
 			))}
 		</div>

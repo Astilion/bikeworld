@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./MobileNav.module.scss";
 
-const MobileNav = props => {
+const MobileNav = () => {
 	const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
 	const menuItemClickHandler = () => {

@@ -1,6 +1,10 @@
 import styles from "./Header.module.scss";
 
-const Header = props => {
+type HeaderProps = {
+	isShown: boolean
+}
+
+const Header = (props: HeaderProps) => {
 	const isShown = props.isShown;
 	return (
 		<>
