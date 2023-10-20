@@ -89,19 +89,21 @@ const slideData = [
 const Slider = () => {
 	const carouselRef = useRef<HTMLDivElement | null>(null);
 
+	const cardWidth = 256 + 10; // Width of a single card
+	const cardsToScroll = 3; // Number of cards to scroll at a time
+	
 	const prev = () => {
-		const box = carouselRef.current;
-		if (box) {
-			const width = box.clientWidth;
-			box.scrollLeft = box.scrollLeft - width;
-		}
+	  const box = carouselRef.current;
+	  if (box) {
+		box.scrollLeft = box.scrollLeft - cardWidth * cardsToScroll; // Move back by the width of three cards
+	  }
 	};
+	
 	const next = () => {
-		const box = carouselRef.current;
-		if (box) {
-			const width = box.clientWidth;
-			box.scrollLeft = box.scrollLeft + width;
-		}
+	  const box = carouselRef.current;
+	  if (box) {
+		box.scrollLeft = box.scrollLeft + cardWidth * cardsToScroll; // Move forward by the width of three cards
+	  }
 	};
 
 	const carousel = (
