@@ -1,36 +1,29 @@
 .slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #4d4646;
-    color: #f5eaea;
-    padding: 2em;
-  }
-  
-  .carousel {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slide {
-    flex-shrink: 0;
-    transition: transform 0.3s;
-    transform: translateX(0);
-  }
-  
-  .active {
-    transform: translateX(0);
-  }
-  
-  .prevButton,
-  .nextButton {
-    margin: 1em;
-    padding: 0.5em 1em;
-    background-color: #7fcd91;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #4d4646;
+	width: 100%;
+	height: 100%;
+	color: #f5eaea;
+	padding: 2em;
+}
+
+.carousel {
+	display: flex;
+	gap: 1rem;
+	width: 80%;
+	max-width: 80%;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.prevButton,
+.nextButton {
+	margin: 1em;
+	padding: 0.5em 1em;
+	background-color: #7fcd91;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
