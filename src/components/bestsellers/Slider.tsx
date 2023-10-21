@@ -89,22 +89,30 @@ const slideData = [
 const Slider = () => {
 	const carouselRef = useRef<HTMLDivElement | null>(null);
 
-	const cardWidth = 256 + 10; // Width of a single card
-	const cardsToScroll = 3; // Number of cards to scroll at a time
+	const cardWidth = 256 + 10;
+	const cardsToScroll = 3;
 	
 	const prev = () => {
-	  const box = carouselRef.current;
-	  if (box) {
-		box.scrollLeft = box.scrollLeft - cardWidth * cardsToScroll; // Move back by the width of three cards
-	  }
-	};
+		const box = carouselRef.current;
+		if (box) {
+		  if (box.scrollLeft === 0) {
+			box.scrollLeft = box.scrollWidth;
+		  } else {
+			box.scrollLeft = box.scrollLeft - cardWidth * cardsToScroll;
+		  }
+		}
+	  };
 	
-	const next = () => {
-	  const box = carouselRef.current;
-	  if (box) {
-		box.scrollLeft = box.scrollLeft + cardWidth * cardsToScroll; // Move forward by the width of three cards
-	  }
-	};
+	  const next = () => {
+		const box = carouselRef.current;
+		if (box) {
+		  if (box.scrollLeft >= box.scrollWidth - box.clientWidth) {
+			box.scrollLeft = 0;
+		  } else {
+			box.scrollLeft = box.scrollLeft + cardWidth * cardsToScroll;
+		  }
+		}
+	  };
 
 	const carousel = (
 		<div className={styles.carousel} ref={carouselRef}>
