@@ -39,7 +39,7 @@
 		&:focus,
 		&:hover {
 			outline: #7fcd91;
-			background-color: #64ad75;
+			;
 		}
 	}
 }
@@ -58,7 +58,7 @@
 			button {
 				font-size: 2rem;
 				background-color: #4d4646;
-				&:hover {
+				&:hover, &:focus {
 					background-color: #64ad75;
 				}
 			}

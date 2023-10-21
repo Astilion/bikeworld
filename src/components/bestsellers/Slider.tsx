@@ -90,7 +90,7 @@ const Slider = () => {
 	const carouselRef = useRef<HTMLDivElement | null>(null);
 
 	const cardWidth = 256 + 10;
-	const cardsToScroll = 3;
+	const cardsToScroll = 1;
 	
 	const prev = () => {
 		const box = carouselRef.current;
@@ -130,13 +130,16 @@ const Slider = () => {
 
 	return (
 		<div className={styles.slider}>
+			{carousel}
+			<div className={styles['buttons-container']}>
 			<button className={styles.prevButton} onClick={prev}>
 			<i className="ti ti-arrow-badge-left"></i>
 			</button>
-			{carousel}
 			<button className={styles.nextButton} onClick={next}>
 			<i className="ti ti-arrow-badge-right"></i>
 			</button>
+			</div>
+
 		</div>
 	);
 };
