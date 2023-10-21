@@ -131,11 +131,11 @@ const Slider = () => {
 	return (
 		<div className={styles.slider}>
 			<button className={styles.prevButton} onClick={prev}>
-				Prev
+			<i className="ti ti-arrow-badge-left"></i>
 			</button>
 			{carousel}
 			<button className={styles.nextButton} onClick={next}>
-				Next
+			<i className="ti ti-arrow-badge-right"></i>
 			</button>
 		</div>
 	);

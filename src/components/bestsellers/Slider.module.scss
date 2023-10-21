@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 100%;
 	color: #f5eaea;
-	padding: 2em;
+	padding: 2em 0;
 }
 
 .carousel {
@@ -18,10 +18,14 @@
 
 .prevButton,
 .nextButton {
-	margin: 1em;
-	padding: 0.5em 1em;
 	background-color: #7fcd91;
 	color: #fff;
 	border: none;
 	cursor: pointer;
+}
+
+@media (min-width: 765px) {
+	.slider {
+		padding: 2em;
+	}
 }
