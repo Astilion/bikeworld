@@ -1,11 +1,13 @@
 import { useRef } from "react";
 import Card from "./Card";
 import styles from "./Slider.module.scss";
+
 import bike1 from "../../assets/Rower-Cube-AIM-RACE-29-2023-black-20.jpg";
 import bike2 from "../../assets/Rower-gorski-OLPRAN-DISCOVERY-29-SHIMANO.jpg";
 import bike3 from "../../assets/Rower-gorski.jpg";
 import bike4 from "../../assets/WYGODNE-SIODELKO-ROWEROWE-SPORTOWE-PIANKA-MIEKKIE.jpg";
 import bike5 from "../../assets/KLAMKOMANETKA-SHIMANO-Acera-STEF-500-3x7.jpg";
+
 
 const slideData = [
 	{
@@ -132,10 +134,10 @@ const Slider = () => {
 		<div className={styles.slider}>
 			{carousel}
 			<div className={styles['buttons-container']}>
-			<button className={styles.prevButton} onClick={prev}>
+			<button className={styles['prev-button']} onClick={prev}>
 			<i className="ti ti-arrow-badge-left"></i>
 			</button>
-			<button className={styles.nextButton} onClick={next}>
+			<button className={styles['next-button']} onClick={next}>
 			<i className="ti ti-arrow-badge-right"></i>
 			</button>
 			</div>
