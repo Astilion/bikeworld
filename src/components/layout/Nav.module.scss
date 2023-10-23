@@ -1,4 +1,3 @@
-
 @media (min-width: 768px) {
 	.nav {
 		text-align: center;
@@ -8,25 +7,23 @@
 
 		.navList {
 			display: flex;
-			justify-content: space-between;
+			align-items: center;
+			justify-content: space-evenly;
 			list-style: none;
 		}
 		.navItem {
 			padding: 1em 2em;
 			cursor: pointer;
-			transition: color, box-shadow 0.3s;
-
+			transition: color;
 
 			&:hover,
 			&:focus {
 				color: #7fcd91;
-				box-shadow: 1px 2px 2px rgb(64, 53, 53);
 			}
 		}
 		.menuItem {
 			position: relative;
 			padding: 1em 2em;
-			margin-bottom: 0.5em;
 
 			cursor: pointer;
 			&:hover {

@@ -1,6 +1,5 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Card from "./Card";
-import SliderControls from "./SliderControls";
 import styles from "./Slider.module.scss";
 
 import bike1 from "../../assets/Rower-Cube-AIM-RACE-29-2023-black-20.jpg";
@@ -98,15 +97,16 @@ const slideData: SlideData[] = [
 ];
 const Slider = () => {
 	const carouselRef = useRef<HTMLDivElement | null>(null);
-	const [isDragging, setIsDragging] =useState(false)
-	const [startX, setStartX] = useState(0);
 
 	const cardWidth = 256 + 10;
 	const cardsToScroll = 1;
 
+	let isDragging = false;
+	let startX: number = 0;
+
 	const handleStart = (e: TouchEvent) => {
-		setIsDragging(true);
-		setStartX(e.touches[0].clientX);
+		isDragging = true;
+		startX = e.touches[0].clientX;
 	};
 
 	const handleMove = (e: TouchEvent) => {
@@ -116,11 +116,11 @@ const Slider = () => {
 		if (carouselRef.current) {
 			carouselRef.current.scrollLeft -= walk;
 		}
-		setStartX(x)
+		startX = x;
 	};
 
 	const handleEnd = () => {
-		setIsDragging(false)
+		isDragging = false;
 	};
 
 	useEffect(() => {
@@ -178,7 +178,14 @@ const Slider = () => {
 	return (
 		<div className={styles.slider}>
 			{carousel}
-			<SliderControls onPrevClick={prev} onNextClick={next}/>
+			<div className={styles["buttons-container"]}>
+				<button className={styles["prev-button"]} onClick={prev}>
+					<i className='ti ti-arrow-badge-left'></i>
+				</button>
+				<button className={styles["next-button"]} onClick={next}>
+					<i className='ti ti-arrow-badge-right'></i>
+				</button>
+			</div>
 		</div>
 	);
 };
