@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Card from "./Card";
+import SliderControls from "./SliderControls";
 import styles from "./Slider.module.scss";
 
 import bike1 from "../../assets/Rower-Cube-AIM-RACE-29-2023-black-20.jpg";
@@ -177,14 +178,7 @@ const Slider = () => {
 	return (
 		<div className={styles.slider}>
 			{carousel}
-			<div className={styles["buttons-container"]}>
-				<button className={styles["prev-button"]} onClick={prev}>
-					<i className='ti ti-arrow-badge-left'></i>
-				</button>
-				<button className={styles["next-button"]} onClick={next}>
-					<i className='ti ti-arrow-badge-right'></i>
-				</button>
-			</div>
+			<SliderControls onPrevClick={prev} onNextClick={next}/>
 		</div>
 	);
 };
