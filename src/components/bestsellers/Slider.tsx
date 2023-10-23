@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Card from "./Card";
 import styles from "./Slider.module.scss";
 
@@ -97,16 +97,15 @@ const slideData: SlideData[] = [
 ];
 const Slider = () => {
 	const carouselRef = useRef<HTMLDivElement | null>(null);
+	const [isDragging, setIsDragging] =useState(false)
+	const [startX, setStartX] = useState(0);
 
 	const cardWidth = 256 + 10;
 	const cardsToScroll = 1;
 
-	let isDragging = false;
-	let startX: number = 0;
-
 	const handleStart = (e: TouchEvent) => {
-		isDragging = true;
-		startX = e.touches[0].clientX;
+		setIsDragging(true);
+		setStartX(e.touches[0].clientX);
 	};
 
 	const handleMove = (e: TouchEvent) => {
@@ -116,11 +115,11 @@ const Slider = () => {
 		if (carouselRef.current) {
 			carouselRef.current.scrollLeft -= walk;
 		}
-		startX = x;
+		setStartX(x)
 	};
 
 	const handleEnd = () => {
-		isDragging = false;
+		setIsDragging(false)
 	};
 
 	useEffect(() => {
